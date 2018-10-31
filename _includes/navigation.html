@@ -2,7 +2,7 @@
 <div class="navbar">
  	{% for item in site.data.navbar.navbar %}
  		{% if item.subItems == null %}
-			<a href="{{ item.url }}">{{ item.title }}</a>
+			<a href="/{{ item.url }}">{{ item.title }}</a>
  		{% else %}
  			<div class="dropdown">
 	    		<button class="dropbtn">{{ item.title }}
@@ -10,7 +10,7 @@
 	    		</button>
 	 			<div class="dropdown-content">
 	 				{% for entry in item.subItems %}
-	 					<a href="{{ entry.url }}">{{ entry.title }}</a>
+	 					<a href="/{{ entry.url }}">{{ entry.title }}</a>
 	 				{% endfor %}
 			    </div>
 		    </div>
